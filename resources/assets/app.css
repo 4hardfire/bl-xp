@@ -1,0 +1,16 @@
+@import '~hydefront/dist/hyde.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+@layer base {
+    .link-button {
+        font-family: Inter, sans-serif;
+    }
+    .link-button:hover {
+        transform: translate(0, -3px);
+    }
+}
