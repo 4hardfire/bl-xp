@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'name' => env('SITE_NAME', 'HydePHP'),
+    'name' => env('SITE_NAME', 'BL-XP'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ return [
     |
     */
 
-    'url' => env('SITE_URL', 'http://localhost'),
+    'url' => env('SITE_URL', 'https://blxp.be'),
 
     /*
     |--------------------------------------------------------------------------
@@ -116,7 +116,7 @@ return [
         'filename' => 'feed.xml',
 
         // The channel description.
-        'description' => env('SITE_NAME', 'HydePHP').' RSS Feed',
+        'description' => env('SITE_NAME', 'BL-XP').' RSS Feed',
     ],
 
     /*
