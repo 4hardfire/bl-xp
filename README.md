@@ -1,6 +1,6 @@
-# BL-XP Company Website
+# BL-XP Website
 
-This is the static company website for **BL-XP**, built using [HydePHP](https://hydephp.com) — a powerful and elegant static site generator powered by Laravel.
+This is the static website for **BL-XP**, built using [HydePHP](https://hydephp.com) — a powerful and elegant static site generator powered by Laravel.
 
 HydePHP lets us build and maintain our website using Markdown and Blade templates, with a clean TailwindCSS frontend. We chose it for its simplicity, flexibility, and developer-friendly workflow.
 
