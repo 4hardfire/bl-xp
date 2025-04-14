@@ -9,7 +9,7 @@
                         </a>
                     </div>
                     <div>
-                        <p>Made with <span class="icon-[tabler--heart-filled] size-5 -mb-1" aria-hidden="true"></span><span class="sr-only">love</span> in <span class="icon-[flag--be-4x3] size-5 -mb-1" aria-hidden="true"></span><span class="sr-only">Belgium</span></p>
+                        <p>Made with <span class="icon-[tabler--heart-filled] -mb-1" aria-hidden="true"></span><span class="sr-only">love</span> in <span class="icon-[flag--be-4x3] -mb-1" aria-hidden="true"></span><span class="sr-only">Belgium</span></p>
                     </div>
                     <div>
                         <small class="font-semibold">{!! \Hyde\Support\Includes::get('footer', config('hyde.footer', 'BL-XP')) !!}</small>
