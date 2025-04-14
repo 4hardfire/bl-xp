@@ -13,4 +13,45 @@
     .link-button:hover {
         transform: translate(0, -3px);
     }
+    /* .swiper-container {
+        padding-bottom: 7px;
+        box-sizing: border-box;
+        padding-left: 4px;
+        margin-left: -4px;
+        padding-right: 4px;
+        margin-right: -4px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        color: white;
+    }
+
+    .swiper-slide {
+        height: auto !important;
+    }
+
+    .swiper-button-next {
+        right: -22px;
+    }
+
+    .swiper-button-prev {
+        left: -22px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 20px;
+    }
+
+    .swiper-pagination {
+        bottom: 18px !important;
+    }
+
+    .swiper-pagination-bullet {
+        height: 14px;
+        width: 14px;
+    } */
 }
