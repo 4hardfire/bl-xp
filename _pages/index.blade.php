@@ -328,10 +328,11 @@
         </section>
     </main>
 @endsection
-<!-- @section('post_scripts') -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+{{-- @section('post_scripts')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
-    <!-- <script>
+    <script>
         const swiper = new Swiper('.swiper-container', {
             loop: true,
             direction: "horizontal",
@@ -359,5 +360,5 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-    </script> -->
-<!-- @endsection -->
+    </script>
+@endsection --}}
