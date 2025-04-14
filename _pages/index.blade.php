@@ -15,18 +15,18 @@
 
     <main class="flex flex-col text-black-normal pb-32 gap-32">
         <!-- Banner Section -->
-        <section class="relative bg-primary dark:bg-black min-h-[75vh] flex flex-col justify-center px-4 sm:px-6">
+        <section class="relative bg-primary dark:bg-black min-h-[100vh] sm:min-h-[75vh] flex flex-col justify-center px-4 sm:px-6">
             <div class="animated-bg absolute opacity-50 w-full h-full left-0">
                 <img src="{{ Asset::mediaLink('homepage-banner.svg') }}" class="w-full h-full object-cover">
             </div>
             <div class="container flex mx-auto relative">
                 <!-- Text Container (75% width on desktop, full width on mobile) -->
-                <div class="flex flex-col justify-center text-white w-full lg:w-3/4 mx-auto">
+                <div class="flex flex-col justify-center text-white w-full lg:w-3/4 mx-auto px-4 sm:px-0">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Where <span>ideas</span> turn <span>digital!</span></h1>
                     <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-4">Tailored Web and IT solutions for your business.</p>
                     <div class="flex flex-col sm:flex-row gap-4 mt-8">
                         <a href="https://www.linkedin.com/in/bernardo-paulino-425954ab/" target="_blank"
-                           class="inline-flex items-center justify-center py-3 px-6 text-black-normal dark:text-white text-lg rounded-lg bg-secondary dark:bg-secondary-dark transition-all duration-200
+                           class="inline-flex items-center justify-center py-3 px-6 text-primary dark:text-white text-lg rounded-lg bg-secondary dark:bg-secondary-dark transition-all duration-200
                            hover:shadow-xl link-button">
                             <span class="icon-[cib--linkedin] size-6 mr-2"></span>
                             Connect on LinkedIn
