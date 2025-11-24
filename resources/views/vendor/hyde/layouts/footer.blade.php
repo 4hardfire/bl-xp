@@ -18,9 +18,7 @@
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                        <li><a href="#services" class="hover:text-primary dark:hover:text-drupal-400 transition">Services</a></li>
-                        <li><a href="#community" class="hover:text-primary dark:hover:text-drupal-400 transition">Community</a></li>
-                        <li><a href="#blog" class="hover:text-primary dark:hover:text-drupal-400 transition">Blog</a></li>
+                        <li><a href="{{ Hyde::relativeLink('posts') }}" class="hover:text-primary dark:hover:text-drupal-400 transition">Blog articles</a></li>
                     </ul>
                 </div>
 
@@ -38,8 +36,8 @@
             <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
                 <p>{!! \Hyde\Support\Includes::get('footer', config('hyde.footer', 'BL-XP')) !!}</p>
                 <div class="flex items-center gap-4 font-mono">
-                    <span class="flex items-center gap-1"><span class="icon-[ph--cookie-fill]"></span> NO COOKIES</span>
-                    <span class="flex items-center gap-1"><span class="icon-[ph--shield-check-fill]"></span> PRIVACY FOCUSED</span>
+                    <span class="flex items-center gap-1 uppercase"><span class="icon-[ph--cookie-fill]"></span> No cookies</span>
+                    <span class="flex items-center gap-1 uppercase"><span class="icon-[ph--shield-check-fill]"></span> Privacy focused</span>
                 </div>
             </div>
         </div>

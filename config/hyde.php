@@ -332,7 +332,7 @@ return [
             'index' => 0,
             'services' => 10,
             'community' => 20,
-            'blog' => 30,
+            'posts' => 30,
             'contact' => 40,
         ],
 
@@ -342,7 +342,7 @@ return [
             'index' => 'Home',
             'services' => 'Services',
             'community' => 'Community',
-            'blog' => 'Blog',
+            'posts' => 'Blog',
             'contact' => 'Contact',
         ],
 

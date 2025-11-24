@@ -13,11 +13,16 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-1 bg-slate-100/50 dark:bg-white/5 p-1 rounded-full border border-slate-200 dark:border-white/5">
-                <a href="#about" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">About</a>
-                <a href="#services" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Services</a>
-                <a href="#community" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Community</a>
-                <a href="#blog" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Blog</a>
-                <a href="#contact" class="ml-2 px-6 py-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-full transition shadow-lg">Contact Me</a>
+                @php
+                    $isHomepage = isset($page) && $page->identifier === 'index';
+                    $isBlogPage = isset($page) && (str_starts_with($page->identifier ?? '', 'posts/') || ($page->identifier ?? '') === 'posts/index');
+                    $isPostPage = isset($page) && $page instanceof \Hyde\Pages\MarkdownPost;
+                @endphp
+                <a href="{{ $isHomepage ? '#about' : Hyde::relativeLink('/') . '#about' }}" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">About</a>
+                <a href="{{ $isHomepage ? '#services' : Hyde::relativeLink('/') . '#services' }}" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Services</a>
+                <a href="{{ $isHomepage ? '#community' : Hyde::relativeLink('/') . '#community' }}" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Community</a>
+                <a href="{{ $isHomepage ? '#blog' : Hyde::relativeLink('posts') }}" class="nav-link px-5 py-2 text-sm font-medium {{ $isBlogPage || $isPostPage ? 'text-slate-900 dark:text-white bg-slate-200/50 dark:bg-white/5' : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5' }} rounded-full transition">Blog</a>
+                <a href="{{ $isHomepage ? '#contact' : Hyde::relativeLink('/') . '#contact' }}" class="ml-2 px-6 py-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-full transition shadow-lg">Contact Me</a>
             </div>
 
             <!-- Theme Toggle & Mobile Menu Buttons -->
@@ -44,11 +49,11 @@
     <div id="mobile-menu"
          class="hidden md:hidden bg-white dark:bg-dark-900 border-b border-slate-200 dark:border-white/10 absolute w-full shadow-lg">
         <div class="px-4 py-4 space-y-2">
-            <a href="#about" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">About</a>
-            <a href="#services" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Services</a>
-            <a href="#community" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Community</a>
-            <a href="#blog" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Blog</a>
-            <a href="#contact" class="mobile-menu-link block px-4 py-3 text-primary dark:text-drupal-400 font-bold">Contact Me</a>
+            <a href="{{ $isHomepage ? '#about' : Hyde::relativeLink('index') . '#about' }}" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">About</a>
+            <a href="{{ $isHomepage ? '#services' : Hyde::relativeLink('index') . '#services' }}" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Services</a>
+            <a href="{{ $isHomepage ? '#community' : Hyde::relativeLink('index') . '#community' }}" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Community</a>
+            <a href="{{ Hyde::relativeLink('posts') }}" class="mobile-menu-link block px-4 py-3 {{ $isBlogPage || $isPostPage ? 'text-slate-900 dark:text-white bg-slate-100 dark:bg-white/5' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5' }} rounded-lg">Blog</a>
+            <a href="{{ $isHomepage ? '#contact' : Hyde::relativeLink('index') . '#contact' }}" class="mobile-menu-link block px-4 py-3 text-primary dark:text-drupal-400 font-bold">Contact Me</a>
         </div>
     </div>
 </nav>

@@ -1,5 +1,8 @@
 @extends('hyde::layouts.app')
-@php($title = "Web Development and IT Solutions")
+@php
+    $title = "Web Development and IT Solutions";
+    use Hyde\Pages\MarkdownPost;
+@endphp
 
 @push('meta')
     <meta name="description" content="Specialized web development services helping businesses scale their digital presence securely and efficiently.">
@@ -8,13 +11,13 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section id="about" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-white dark:bg-dark-950">
+    <section id="about" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-slate-50 dark:bg-dark-950">
         <!-- Background Effects -->
         <div class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
-            <div class="lg:w-1/2 space-y-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-32">
+            <div class="lg:w-3/5 space-y-8 relative z-10">
                 <h1 class="text-5xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-tight">
                 Crafting Scalable <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0066B2] to-accent-700 dark:from-primary-dark dark:to-accent-700">Web Solutions</span>
@@ -50,11 +53,12 @@
             </div>
 
             <!-- Banner with rotation effect from original template -->
-            <div class="lg:w-1/2 w-full relative">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-2 rotate-3 hover:rotate-0 transition duration-500">
-                    <img src="{{ Asset::mediaLink('homepage-banner.svg') }}"
-                         alt="Development workspace"
-                         class="rounded-xl w-full object-cover h-[400px] lg:h-[500px]">
+            <div class="lg:w-2/5 w-full relative max-w-md mx-auto lg:mx-0">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-2 rotate-3 hover:rotate-0 transition duration-500 group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent-700/20 dark:from-drupal-600/30 dark:to-purple-600/30 mix-blend-multiply z-10 group-hover:opacity-0 transition duration-700"></div>
+                    <img src="{{ Asset::mediaLink('Bernardo.jpg') }}"
+                         alt="Bernardo Paulino"
+                         class="rounded-xl w-full object-cover aspect-square contrast-110 saturate-110">
 
                     <!-- Floating Badge -->
                     <div class="absolute bottom-8 left-8 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 py-3 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 flex items-center gap-3">
@@ -72,7 +76,7 @@
     </section>
 
     <!-- Backend Expertise Section -->
-    <section id="services" class="py-32 relative">
+    <section id="services" class="py-32 relative bg-slate-50 dark:bg-dark-950">
         <div class="absolute inset-0 bg-slate-100/50 dark:bg-dark-900/50 skew-y-2 transform origin-top-left -z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -234,63 +238,59 @@
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Latest Articles & Insights</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <article class="group cursor-pointer bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="aspect-video overflow-hidden relative">
-                        <div class="absolute inset-0 bg-slate-900/30 dark:bg-slate-900/50 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Code" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 font-mono mb-2">
-                            <span class="text-primary dark:text-drupal-400">TECH</span>
-                            <span>•</span>
-                            <span>OCT 12, 2023</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-drupal-400 transition mb-2">Drush vs GUI: A performance analysis</h4>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">Why clicking buttons is costing you billable hours. A deep dive into Drush aliases and scripting.</p>
-                    </div>
-                </article>
+            @php
+                // Get latest 3 blog posts
+                $latestPosts = MarkdownPost::getLatestPosts()->take(3);
+            @endphp
 
-                <!-- Article 2 -->
-                <article class="group cursor-pointer bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="aspect-video overflow-hidden relative">
-                        <div class="absolute inset-0 bg-slate-900/30 dark:bg-slate-900/50 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coffee" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 font-mono mb-2">
-                            <span class="text-purple-500 dark:text-purple-400">HOBBY</span>
-                            <span>•</span>
-                            <span>SEP 28, 2023</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-drupal-400 transition mb-2">Variables in Coffee Extraction</h4>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">Debugging my morning brew. How grind size correlates to extraction time similar to SQL indexing.</p>
-                    </div>
-                </article>
+            @if($latestPosts->isNotEmpty())
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    @foreach($latestPosts as $post)
+                        <article class="group cursor-pointer bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition">
+                            <a href="{{ $post->getRoute() }}" class="block">
+                                @if($post->image)
+                                    <div class="aspect-video overflow-hidden relative">
+                                        <div class="absolute inset-0 bg-slate-900/30 dark:bg-slate-900/50 group-hover:bg-transparent transition duration-500 z-10"></div>
+                                        <img src="{{ $post->image->getSource() }}" alt="{{ $post->title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
+                                    </div>
+                                @endif
+                                <div class="p-6">
+                                    <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 font-mono mb-2">
+                                        @if($post->category)
+                                            <span class="text-primary dark:text-drupal-400 uppercase">{{ $post->category }}</span>
+                                            <span>•</span>
+                                        @endif
+                                        @if($post->date)
+                                            <span>{{ strtoupper($post->date->short) }}</span>
+                                        @endif
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-drupal-400 transition mb-2">{{ $post->title }}</h4>
+                                    @if($post->description)
+                                        <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{{ $post->description }}</p>
+                                    @endif
+                                </div>
+                            </a>
+                        </article>
+                    @endforeach
+                </div>
+            @else
+                <div class="text-center py-12">
+                    <p class="text-slate-600 dark:text-slate-400">No articles yet. Check back soon!</p>
+                </div>
+            @endif
 
-                <!-- Article 3 -->
-                <article class="group cursor-pointer bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="aspect-video overflow-hidden relative">
-                        <div class="absolute inset-0 bg-slate-900/30 dark:bg-slate-900/50 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hiking" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 font-mono mb-2">
-                            <span class="text-green-600 dark:text-green-400">LIFESTYLE</span>
-                            <span>•</span>
-                            <span>AUG 15, 2023</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-drupal-400 transition mb-2">Offline Mode: The Alps</h4>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">Disconnecting from the cloud to reconnect with the ground. Hiking trails in Switzerland.</p>
-                    </div>
-                </article>
+            <!-- View All Link -->
+            <div class="text-center mt-12">
+                <a href="{{ Hyde::relativeLink('posts') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 rounded-lg font-medium hover:border-primary dark:hover:border-drupal-500 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-300 group">
+                    <span>View All Articles</span>
+                    <span class="icon-[ph--arrow-right-bold] text-lg group-hover:translate-x-1 transition"></span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32 relative overflow-hidden bg-white dark:bg-dark-950">
+    <section id="contact" class="py-32 relative overflow-hidden bg-slate-50 dark:bg-dark-950">
         <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent-700"></div>
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
