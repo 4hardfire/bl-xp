@@ -10,7 +10,6 @@
     <!-- Hero Section -->
     <section id="about" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-white dark:bg-dark-950">
         <!-- Background Effects -->
-        <div class="absolute inset-0 -z-10 bg-grid-pattern opacity-[0.15] dark:opacity-30"></div>
         <div class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
 
