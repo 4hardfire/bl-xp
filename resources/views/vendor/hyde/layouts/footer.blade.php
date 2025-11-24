@@ -1,43 +1,47 @@
 @if(config('hyde.footer') !== false)
-    <footer aria-label="Page footer" class="p-6 w-full mt-auto bg-primary dark:bg-gray-light-solid text-white">
-        <div class="container mx-auto">
-            <div class="flex flex-col sm:flex-row sm:justify-between gap-4 items-center text-center sm:text-left">
-                <div class="flex flex-col gap-4 items-center sm:items-start">
-                    <div class="flex items-center">
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-dark-950 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
                         <a href="{{ Routes::get('index') }}" aria-label="Home page">
-                            <img src="{{ Asset::mediaLink('BL-XP_Logo_white.svg') }}" alt="{{ config('hyde.name', 'HydePHP') }} logo" class="logo w-[100px] transition-transform duration-300 hover:scale-105">
+                            <img src="{{ Asset::mediaLink('BL-XP_Logo_white.svg') }}" alt="{{ config('hyde.name', 'BL-XP') }}" class="h-8 w-auto transition-transform duration-300 hover:scale-105 dark:block hidden">
+                            <img src="{{ Asset::mediaLink('BL-XP_Logo.svg') }}" alt="{{ config('hyde.name', 'BL-XP') }}" class="h-8 w-auto transition-transform duration-300 hover:scale-105 dark:hidden">
                         </a>
                     </div>
-                    <div>
-                        <p>Made with <span class="icon-[tabler--heart-filled] -mb-1" aria-hidden="true"></span><span class="sr-only">love</span> in <span class="icon-[flag--be-4x3] -mb-1" aria-hidden="true"></span><span class="sr-only">Belgium</span></p>
-                    </div>
-                    <div>
-                        <small class="font-semibold">{!! \Hyde\Support\Includes::get('footer', config('hyde.footer', 'BL-XP')) !!}</small>
-                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xs leading-relaxed">
+                        Specialized Drupal development services helping businesses scale their digital presence securely and efficiently.
+                    </p>
                 </div>
-                <ul class="flex items-center space-x-4 mt-2">
-                    <li>
-                        <a href="https://www.linkedin.com/in/bernardo-paulino-425954ab/" target="_blank" class="hover:text-gray-400 flex items-center">
-                            <span class="icon-[cib--linkedin] size-10"></span>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/4hardfire" target="_blank" class="hover:text-gray-400 flex items-center">
-                            <span class="icon-[cib--github] size-10"></span>
-                            <span class="sr-only">GitHub</span>
-                        </a>
-                    </li>
-                </ul>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="#services" class="hover:text-primary dark:hover:text-drupal-400 transition">Services</a></li>
+                        <li><a href="#community" class="hover:text-primary dark:hover:text-drupal-400 transition">Community</a></li>
+                        <li><a href="#blog" class="hover:text-primary dark:hover:text-drupal-400 transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="https://www.linkedin.com/in/bernardo-paulino-425954ab/" target="_blank" class="hover:text-primary dark:hover:text-drupal-400 transition">LinkedIn</a></li>
+                        <li><a href="https://github.com/4hardfire" target="_blank" class="hover:text-primary dark:hover:text-drupal-400 transition">GitHub</a></li>
+                        <li><a href="https://www.drupal.org/u/bernardopaulino" target="_blank" class="hover:text-primary dark:hover:text-drupal-400 transition">Drupal.org</a></li>
+                        <li><a href="mailto:bernardo.lemos@live.com.pt" class="hover:text-primary dark:hover:text-drupal-400 transition">Email</a></li>
+                    </ul>
+                </div>
             </div>
-            <a id="scroll-top-btn" href="#app" aria-label="Go to top of page"
-               class="fixed bottom-[35px] right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary dark:bg-primary-dark hover:bg-accent-700 dark:hover:bg-accent-700 text-white shadow-md ring-2 ring-white dark:ring-white opacity-60 hover:opacity-100 invisible transition-all duration-300">
-                <svg width="1.5rem" height="1.5rem" role="presentation"
-                     class="fill-current block mx-auto h-8 w-8"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
-                    <path d="M7 14l5-5 5 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
+
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+                <p>{!! \Hyde\Support\Includes::get('footer', config('hyde.footer', 'BL-XP')) !!}</p>
+                <div class="flex items-center gap-4 font-mono">
+                    <span class="flex items-center gap-1"><span class="icon-[ph--cookie-slash-fill]"></span> NO COOKIES</span>
+                    <span class="flex items-center gap-1"><span class="icon-[ph--shield-check-fill]"></span> PRIVACY FOCUSED</span>
+                </div>
+            </div>
         </div>
     </footer>
 @endif

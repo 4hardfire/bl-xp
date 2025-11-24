@@ -7,51 +7,89 @@
 [x-cloak] { display: none !important; }
 
 @layer base {
-    .link-button {
-        font-family: Inter, sans-serif;
-    }
-    .link-button:hover {
-        transform: translate(0, -3px);
-    }
-    /* .swiper-container {
-        padding-bottom: 7px;
-        box-sizing: border-box;
-        padding-left: 4px;
-        margin-left: -4px;
-        padding-right: 4px;
-        margin-right: -4px;
+    /* Light mode default */
+    body {
+        background-color: #ffffff;
+        color: #1e293b;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 50px;
-        height: 50px;
-        color: white;
+    /* Dark mode */
+    .dark body {
+        background-color: #020617;
+        color: #e2e8f0;
     }
 
-    .swiper-slide {
-        height: auto !important;
+    /* Custom Scrollbar - Light Mode */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 5px;
+        border: 2px solid #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
     }
 
-    .swiper-button-next {
-        right: -22px;
+    /* Custom Scrollbar - Dark Mode */
+    .dark ::-webkit-scrollbar-track {
+        background: #0f172a;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border: 2px solid #0f172a;
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
     }
 
-    .swiper-button-prev {
-        left: -22px;
+    /* Code typing cursor animation */
+    .cursor-blink {
+        animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        font-size: 20px;
+    /* Grid Pattern - Light Mode */
+    .bg-grid-pattern {
+        background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                          linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
     }
 
-    .swiper-pagination {
-        bottom: 18px !important;
+    /* Grid Pattern - Dark Mode */
+    .dark .bg-grid-pattern {
+        background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                          linear-gradient(to bottom, #1e293b 1px, transparent 1px);
     }
 
-    .swiper-pagination-bullet {
-        height: 14px;
-        width: 14px;
-    } */
+    /* Glass Card Effect */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .glass-card {
+        background: rgba(30, 41, 59, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Active Navigation Link Styles */
+    .active-nav-link {
+        @apply !text-slate-900 !bg-slate-200;
+    }
+
+    .dark .active-nav-link {
+        @apply !text-white !bg-white/5;
+    }
 }
+

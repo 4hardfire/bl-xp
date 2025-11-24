@@ -11,7 +11,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter', 'Inter var', ...defaultTheme.fontFamily.sans],
+                sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                mono: ['ui-monospace', 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'monospace'],
             },
             typography: {
                 DEFAULT: {
@@ -108,8 +110,27 @@ module.exports = {
                     500: "#a9bacb1a",
                     600: "#a9bacb33",
                     700: "#0033660d"
+                },
+                drupal: {
+                    50: '#f0f9ff',
+                    100: '#e0f2fe',
+                    200: '#bae6fd',
+                    300: '#7dd3fc',
+                    400: '#38bdf8',
+                    500: '#0ea5e9',
+                    600: '#0284c7',
+                    900: '#0c4a6e',
+                },
+                dark: {
+                    800: '#1e293b',
+                    900: '#0f172a',
+                    950: '#020617',
                 }
             },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'hero-glow': 'conic-gradient(from 90deg at 50% 50%, #0f172a 0%, #1e293b 50%, #0f172a 100%)',
+            }
         },
     },
     plugins: [
