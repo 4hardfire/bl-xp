@@ -11,3 +11,8 @@
 .env
 
 /_site
+/_media/app.css
+/_media/app.js
+/_media/fonts
+/_media/images
+/_media/mix-manifest.json

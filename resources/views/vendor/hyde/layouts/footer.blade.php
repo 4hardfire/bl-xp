@@ -38,7 +38,7 @@
             <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
                 <p>{!! \Hyde\Support\Includes::get('footer', config('hyde.footer', 'BL-XP')) !!}</p>
                 <div class="flex items-center gap-4 font-mono">
-                    <span class="flex items-center gap-1"><span class="icon-[ph--cookie-slash-fill]"></span> NO COOKIES</span>
+                    <span class="flex items-center gap-1"><span class="icon-[ph--cookie-fill]"></span> NO COOKIES</span>
                     <span class="flex items-center gap-1"><span class="icon-[ph--shield-check-fill]"></span> PRIVACY FOCUSED</span>
                 </div>
             </div>
