@@ -308,7 +308,7 @@ return [
     |
     */
 
-    'footer' => new \Illuminate\Support\HtmlString('Copyright &copy; ' . date('Y') . ' All rights reserved.'),
+    'footer' => new \Illuminate\Support\HtmlString('&copy; ' . date('Y') . ' BL-XP. All rights reserved.'),
 
     /*
     |--------------------------------------------------------------------------
@@ -330,15 +330,20 @@ return [
         // Lower values show up first in the menu. The default is 999.
         'order' => [
             'index' => 0,
-            'posts' => 10,
-            'docs/index' => 100,
+            'services' => 10,
+            'community' => 20,
+            'posts' => 30,
+            'contact' => 40,
         ],
 
         // In case you want to customize the labels for the menu items, you can do so here.
         // Simply add the route key as the array key, and the label as the value.
         'labels' => [
             'index' => 'Home',
-            'docs/index' => 'Docs',
+            'services' => 'Services',
+            'community' => 'Community',
+            'posts' => 'Blog',
+            'contact' => 'Contact',
         ],
 
         // These are the route keys of pages that should not show up in the navigation menu.

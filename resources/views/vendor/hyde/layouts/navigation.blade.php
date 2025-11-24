@@ -2,75 +2,58 @@
     $navigation = \Hyde\Framework\Features\Navigation\NavigationMenu::create();
 @endphp
 
-<header class="relative" role="banner">
-    <div class="absolute left-1/2 transform -translate-x-1/2 w-full p-4 sm:p-6 z-10">
-        <nav aria-label="Main navigation" id="main-navigation" class="container flex flex-wrap mx-auto rounded-xl p-4 items-center justify-between shadow-lg sm:shadow-xl bg-gray-200 md:shadow-none dark:bg-gray-light-solid">
-            <div class="flex flex-grow items-center flex-shrink-0 text-normal-dark dark:text-normal">
-                @include('hyde::components.navigation.navigation-brand')
+<!-- Navigation -->
+<nav class="fixed w-full z-50 bg-dark-950/80 dark:bg-dark-950/80 bg-white/90 backdrop-blur-lg border-b border-white/5 dark:border-white/5 border-slate-200 transition-all duration-300" id="navbar" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <a href="{{ Routes::get('index') }}" class="flex items-center cursor-pointer group">
+                <img src="{{ Asset::mediaLink('BL-XP_Logo_white.svg') }}" alt="{{ config('hyde.name', 'BL-XP') }}" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105 dark:block hidden">
+                <img src="{{ Asset::mediaLink('BL-XP_Logo.svg') }}" alt="{{ config('hyde.name', 'BL-XP') }}" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105 dark:hidden">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-1 bg-slate-100/50 dark:bg-white/5 p-1 rounded-full border border-slate-200 dark:border-white/5">
+                @php
+                    $isHomepage = isset($page) && $page->identifier === 'index';
+                    $isBlogPage = isset($page) && (str_starts_with($page->identifier ?? '', 'posts/') || ($page->identifier ?? '') === 'posts/index');
+                    $isPostPage = isset($page) && $page instanceof \Hyde\Pages\MarkdownPost;
+                @endphp
+                <a href="{{ $isHomepage ? '#about' : Hyde::relativeLink('/') . '#about' }}" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">About</a>
+                <a href="{{ $isHomepage ? '#services' : Hyde::relativeLink('/') . '#services' }}" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Services</a>
+                <a href="{{ $isHomepage ? '#community' : Hyde::relativeLink('/') . '#community' }}" class="nav-link px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5 rounded-full transition">Community</a>
+                <a href="{{ $isHomepage ? '#blog' : Hyde::relativeLink('posts') }}" class="nav-link px-5 py-2 text-sm font-medium {{ $isBlogPage || $isPostPage ? 'text-slate-900 dark:text-white bg-slate-200/50 dark:bg-white/5' : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-white dark:hover:bg-white/5' }} rounded-full transition">Blog</a>
+                <a href="{{ $isHomepage ? '#contact' : Hyde::relativeLink('/') . '#contact' }}" class="ml-2 px-6 py-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-full transition shadow-lg">Contact Me</a>
             </div>
 
-            <!-- Theme toggle button visible on mobile, hidden on desktop -->
-            <div class="md:hidden order-2">
-                <x-hyde::navigation.theme-toggle-button/>
-            </div>
+            <!-- Theme Toggle & Mobile Menu Buttons -->
+            <div class="flex items-center gap-2">
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()"
+                        class="p-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+                        aria-label="Toggle theme">
+                    <span class="icon-[ph--sun-fill] text-2xl hidden dark:block"></span>
+                    <span class="icon-[ph--moon-fill] text-2xl dark:hidden"></span>
+                </button>
 
-            <div class="block md:hidden order-3">
-                <button id="navigation-toggle-button"
-                        class="flex items-center px-3 py-1 hover:text-gray-700 dark:text-gray-200"
-                        aria-label="Toggle navigation menu"
-                        aria-expanded="false"
-                        aria-controls="main-navigation-links"
-                        @click="navigationOpen = ! navigationOpen">
-                    <svg id="open-main-navigation-menu-icon"
-                         class="dark:fill-gray-200"
-                         xmlns="http://www.w3.org/2000/svg"
-                         height="24"
-                         width="24"
-                         viewBox="0 0 24 24"
-                         x-show="! navigationOpen"
-                         style="display: block;"
-                         aria-hidden="true">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                    <svg id="close-main-navigation-menu-icon"
-                         class="dark:fill-gray-200"
-                         xmlns="http://www.w3.org/2000/svg"
-                         height="24"
-                         width="24"
-                         viewBox="0 0 24 24"
-                         x-show="navigationOpen"
-                         style="display: none;"
-                         aria-hidden="true">
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                    </svg>
-                    <span class="sr-only" x-text="navigationOpen ? 'Close menu' : 'Open menu'"></span>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden p-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+                        aria-label="Toggle menu">
+                    <span class="icon-[ph--list] text-2xl"></span>
                 </button>
             </div>
-
-            <div id="main-navigation-links"
-                 class="w-full x-uncloak-md md:flex flex-grow md:flex-grow-0 md:items-center md:w-auto border-t sm:-ml-4 sm:-mr-4 md:-ml-0 md:-mr-0 mt-3 pt-3 md:border-none md:mt-0 md:py-0 border-gray-200 dark:border-gray-700 order-4"
-                 :class="navigationOpen ? '' : 'hidden'"
-                 x-cloak
-                 role="navigation"
-                 aria-label="Main menu">
-                <ul class="md:flex-grow md:flex justify-end items-center" role="menubar">
-                    @foreach ($navigation->items as $item)
-                        <li role="none">
-                            @if($item instanceof \Hyde\Framework\Features\Navigation\DropdownNavItem)
-                                <x-hyde::navigation.dropdown :label="\Hyde\Hyde::makeTitle($item->label)" :items="$item->items"/>
-                            @else
-                                @include('hyde::components.navigation.navigation-link')
-                            @endif
-                        </li>
-                    @endforeach
-                    <!-- Theme toggle button visible on desktop, hidden on mobile -->
-                    <li class="hidden md:block md:ml-4" role="none">
-                        <x-hyde::navigation.theme-toggle-button/>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        </div>
     </div>
-</header>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu"
+         class="hidden md:hidden bg-white dark:bg-dark-900 border-b border-slate-200 dark:border-white/10 absolute w-full shadow-lg">
+        <div class="px-4 py-4 space-y-2">
+            <a href="{{ $isHomepage ? '#about' : Hyde::relativeLink('index') . '#about' }}" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">About</a>
+            <a href="{{ $isHomepage ? '#services' : Hyde::relativeLink('index') . '#services' }}" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Services</a>
+            <a href="{{ $isHomepage ? '#community' : Hyde::relativeLink('index') . '#community' }}" class="mobile-menu-link nav-link block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg">Community</a>
+            <a href="{{ Hyde::relativeLink('posts') }}" class="mobile-menu-link block px-4 py-3 {{ $isBlogPage || $isPostPage ? 'text-slate-900 dark:text-white bg-slate-100 dark:bg-white/5' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5' }} rounded-lg">Blog</a>
+            <a href="{{ $isHomepage ? '#contact' : Hyde::relativeLink('index') . '#contact' }}" class="mobile-menu-link block px-4 py-3 text-primary dark:text-drupal-400 font-bold">Contact Me</a>
+        </div>
+    </div>
+</nav>
