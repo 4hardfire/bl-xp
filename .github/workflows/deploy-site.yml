@@ -34,7 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: GitHub Action for npm
-        uses: bahmutov/npm-install@v1.6.0
+        uses: bahmutov/npm-install@v1
         with:
           useLockFile: true
       - name: Install node packages
