@@ -53,7 +53,7 @@
             </div>
 
             <!-- Banner with rotation effect from original template -->
-            <div class="lg:w-2/5 w-full relative max-w-md mx-auto lg:mx-0">
+            <div class="lg:w-2/5 w-full relative max-w-md mx-auto lg:mx-0 hidden lg:block">
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-2 rotate-3 hover:rotate-0 transition duration-500 group">
                     <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent-700/20 dark:from-drupal-600/30 dark:to-purple-600/30 mix-blend-multiply z-10 group-hover:opacity-0 transition duration-700"></div>
                     <img src="{{ Asset::mediaLink('Bernardo.jpg') }}"
@@ -82,67 +82,68 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
-                    <h2 class="text-sm font-mono font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">My Expertise</h2>
+                    <h2 class="text-sm font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">My Expertise</h2>
                     <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Technical Services</h3>
                 </div>
-                    <p class="text-slate-600 dark:text-slate-400 max-w-md text-sm leading-relaxed md:text-right">
+                    <p class="text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed md:text-right">
                         Powering your digital platform with a strong and reliable technical core built for security, performance, and future growth.
                     </p>
                 </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service 1 -->
-                <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-drupal-500/10 rounded-lg flex items-center justify-center text-primary dark:text-drupal-400 mb-6 border border-primary/20 dark:border-drupal-500/20 group-hover:border-primary/50 dark:group-hover:border-drupal-500/50 group-hover:scale-110 transition">
-                        <span class="icon-[ph--puzzle-piece-fill] text-2xl"></span>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
+                        <div class="w-12 h-12 bg-primary/10 dark:bg-drupal-500/10 rounded-lg flex items-center justify-center text-primary dark:text-drupal-400 mb-6 border border-primary/20 dark:border-drupal-500/20 group-hover:border-primary/50 dark:group-hover:border-drupal-500/50 group-hover:scale-110 transition">
+                            <span class="icon-[ph--puzzle-piece-fill] text-2xl"></span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Custom Features Development</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-md leading-relaxed">Building reliable Drupal features that follow best practices, from small customizations to more advanced functionality.</p>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Custom Features Development</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Building reliable Drupal features that follow best practices, from small customizations to more advanced functionality.</p>
-                </div>
 
-                <!-- Service 2 -->
-                <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 dark:text-blue-400 mb-6 border border-blue-500/20 group-hover:border-blue-500/50 group-hover:scale-110 transition">
-                        <span class="icon-[ph--arrows-left-right-fill] text-2xl"></span>
+                    <!-- Service 2 -->
+                    <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 dark:text-blue-400 mb-6 border border-blue-500/20 group-hover:border-blue-500/50 group-hover:scale-110 transition">
+                            <span class="icon-[ph--arrows-left-right-fill] text-2xl"></span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Migrations</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-md leading-relaxed">Expert handling of Drupal 7 to 11 migrations, including data imports from CSV, JSON, XML, and legacy databases.</p>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Migrations</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Expert handling of Drupal 7 to 11 migrations, including data imports from CSV, JSON, XML, and legacy databases.</p>
-                </div>
 
-                <!-- Service 3 -->
-                <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
-                    <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 dark:text-purple-400 mb-6 border border-purple-500/20 group-hover:border-purple-500/50 group-hover:scale-110 transition">
-                        <span class="icon-[ph--lightning-fill] text-2xl"></span>
+                    <!-- Service 3 -->
+                    <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
+                        <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 dark:text-purple-400 mb-6 border border-purple-500/20 group-hover:border-purple-500/50 group-hover:scale-110 transition">
+                            <span class="icon-[ph--lightning-fill] text-2xl"></span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Performance Tuning</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-md leading-relaxed">Auditing and optimizing Drupal sites. Varnish, Redis integration, database query optimization, and caching strategies.</p>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Performance Tuning</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Auditing and optimizing Drupal sites. Varnish, Redis integration, database query optimization, and caching strategies.</p>
-                </div>
 
-                <!-- Service 4 -->
-                <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
-                    <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-6 border border-cyan-500/20 group-hover:border-cyan-500/50 group-hover:scale-110 transition">
-                        <span class="icon-[ph--cloud-arrow-up-fill] text-2xl"></span>
+                    <!-- Service 4 -->
+                    <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
+                        <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-6 border border-cyan-500/20 group-hover:border-cyan-500/50 group-hover:scale-110 transition">
+                            <span class="icon-[ph--cloud-arrow-up-fill] text-2xl"></span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Decoupled Drupal</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-md leading-relaxed">Using Drupal as a headless CMS. Building APIs (JSON:API/GraphQL) consumed by React, Vue, or Next.js frontends.</p>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Decoupled Drupal</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Using Drupal as a headless CMS. Building APIs (JSON:API/GraphQL) consumed by React, Vue, or Next.js frontends.</p>
-                </div>
 
-                <!-- Service 5 -->
-                <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
-                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-600 dark:text-green-400 mb-6 border border-green-500/20 group-hover:border-green-500/50 group-hover:scale-110 transition">
-                        <span class="icon-[ph--plugs-connected-fill] text-2xl"></span>
+                    <!-- Service 5 -->
+                    <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
+                        <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-600 dark:text-green-400 mb-6 border border-green-500/20 group-hover:border-green-500/50 group-hover:scale-110 transition">
+                            <span class="icon-[ph--plugs-connected-fill] text-2xl"></span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">API Integrations</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-md leading-relaxed">Connecting Drupal with third-party services, CRMs and external APIs.</p>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">API Integrations</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Connecting Drupal with third-party services, CRMs and external APIs.</p>
-                </div>
 
-                <!-- Service 6 -->
-                <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
-                    <div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-600 dark:text-orange-400 mb-6 border border-orange-500/20 group-hover:border-orange-500/50 group-hover:scale-110 transition">
-                        <span class="icon-[ph--wrench-fill] text-2xl"></span>
+                    <!-- Service 6 -->
+                    <div class="glass-card bg-white dark:bg-transparent p-8 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition duration-300 group border border-slate-200 dark:border-white/10">
+                        <div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-600 dark:text-orange-400 mb-6 border border-orange-500/20 group-hover:border-orange-500/50 group-hover:scale-110 transition">
+                            <span class="icon-[ph--wrench-fill] text-2xl"></span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Site Maintenance</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-md leading-relaxed">Security updates, bug fixes, feature enhancements, and long-term support for enterprise-level applications.</p>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Site Maintenance</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Security updates, bug fixes, feature enhancements, and long-term support for enterprise-level applications.</p>
                 </div>
             </div>
         </div>
@@ -151,77 +152,77 @@
     <!-- Module Maintenance / OSS -->
     <section id="community" class="py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <!-- Text Content -->
-                <div class="order-2 lg:order-1">
-                    <h2 class="text-sm font-mono font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">Community</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">Open Source Contributions</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                    I believe in giving back to the community that powers the web. I help maintaining several modules on Drupal.org and contribute patches to both Core issues and Contrib projects.
-                    </p>
+            <!-- Text Content -->
+            <div class="order-1 lg:order-1">
+                <h2 class="text-sm font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">Community</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">Open Source Contributions</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                I believe in giving back to the community that powers the web. I help maintaining several modules on Drupal.org and contribute patches to both Core issues and Contrib projects.
+                </p>
 
-                    <div class="space-y-4">
-                        <!-- Module Item -->
-                        <a href="https://www.drupal.org/project/graphql_compose_configs" target="_blank" class="block bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 p-4 rounded-lg hover:border-primary dark:hover:border-drupal-500 transition group">
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-4">
-                                    <span class="icon-[ph--package-fill] w-6 h-6 inline-block text-slate-400 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-drupal-400 transition flex-shrink-0"></span>
-                                    <div>
-                                        <h5 class="text-base text-slate-900 dark:text-white font-bold font-mono group-hover:text-primary dark:group-hover:text-drupal-400 transition">GraphQL Compose Configs</h5>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Expose Drupal configuration through GraphQL, providing type-safe access to configuration data.</p>
-                                    </div>
+                <div class="space-y-4">
+                    <!-- Module Item -->
+                    <a href="https://www.drupal.org/project/graphql_compose_configs" target="_blank" class="block bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 p-4 rounded-lg hover:border-primary dark:hover:border-drupal-500 transition group">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-4">
+                                <span class="icon-[ph--package-fill] w-6 h-6 inline-block text-slate-400 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-drupal-400 transition flex-shrink-0"></span>
+                                <div>
+                                    <h5 class="text-base text-slate-900 dark:text-white font-bold group-hover:text-primary dark:group-hover:text-drupal-400 transition">GraphQL Compose Configs</h5>
+                                    <p class="text-md text-slate-500 dark:text-slate-400 mt-1">Expose Drupal configuration through GraphQL, providing type-safe access to configuration data.</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <!-- Module Item -->
-                        <a href="https://www.drupal.org/project/openfed" target="_blank" class="block bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 p-4 rounded-lg hover:border-primary dark:hover:border-drupal-500 transition group">
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-4">
-                                    <span class="icon-[ph--package-fill] w-6 h-6 inline-block text-slate-400 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-drupal-400 transition flex-shrink-0"></span>
-                                    <div>
-                                        <h5 class="text-base text-slate-900 dark:text-white font-bold font-mono group-hover:text-primary dark:group-hover:text-drupal-400 transition">OpenFed</h5>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">A general-purpose, multilingual Drupal 7 to Drupal 10 distribution. It has a strong focus on accessibility and it follows European guidelines for several topics, like GDPR.</p>
-                                    </div>
+                    <!-- Module Item -->
+                    <a href="https://www.drupal.org/project/openfed" target="_blank" class="block bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 p-4 rounded-lg hover:border-primary dark:hover:border-drupal-500 transition group">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-4">
+                                <span class="icon-[ph--package-fill] w-6 h-6 inline-block text-slate-400 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-drupal-400 transition flex-shrink-0"></span>
+                                <div>
+                                    <h5 class="text-base text-slate-900 dark:text-white font-bold group-hover:text-primary dark:group-hover:text-drupal-400 transition">OpenFed</h5>
+                                    <p class="text-md text-slate-500 dark:text-slate-400 mt-1">A general-purpose, multilingual Drupal 7 to Drupal 10 distribution. It has a strong focus on accessibility and it follows European guidelines for several topics, like GDPR.</p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="https://www.drupal.org/u/bernardopaulino" target="_blank" class="text-primary dark:text-drupal-400 hover:text-primary-dark dark:hover:text-white text-sm font-mono flex items-center gap-2">
-                            View Drupal.org Profile <span class="icon-[ph--arrow-right-bold]"></span>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
 
-                <!-- Visual Abstract Representation -->
-                <div class="order-1 lg:order-2 relative">
+                 <div class="mt-8">
+                     <a href="https://www.drupal.org/u/bernardopaulino" target="_blank" class="text-primary dark:text-drupal-400 hover:underline hover:text-accent-700 dark:hover:text-white inline-flex items-center gap-2 transition group">
+                         View Drupal.org Profile <span class="icon-[ph--arrow-right-bold] group-hover:translate-x-1 transition"></span>
+                     </a>
+                 </div>
+            </div>
+
+            <!-- Visual Abstract Representation -->
+            <div class="order-2 lg:order-2 relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent-700 dark:from-drupal-600 dark:to-purple-600 blur-[100px] opacity-10 dark:opacity-20"></div>
                     <div class="relative grid grid-cols-2 gap-4">
                         <div class="space-y-4 mt-8">
                             <div class="glass-card bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 p-6 rounded-xl text-center">
                                 <span class="icon-[ph--presentation-duotone] text-4xl text-slate-900 dark:text-white mb-2 inline-block"></span>
                                 <div class="text-2xl font-bold text-slate-900 dark:text-white">Various</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 font-mono uppercase">Community events attended</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase">Community events attended</div>
                             </div>
                             <div class="glass-card bg-white dark:bg-transparent border border-primary/30 dark:border-drupal-500/30 p-6 rounded-xl text-center bg-primary/5 dark:bg-drupal-600/20">
                                 <span class="icon-[ph--users-three-duotone] text-4xl text-primary dark:text-drupal-400 mb-2 inline-block"></span>
                                 <div class="text-2xl font-bold text-slate-900 dark:text-white">10</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 font-mono uppercase">Modules maintained</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase">Modules maintained</div>
                             </div>
                     </div>
                         <div class="space-y-4">
                             <div class="glass-card bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 p-6 rounded-xl text-center">
                                 <span class="icon-[ph--coffee-duotone] text-4xl text-slate-900 dark:text-white mb-2 inline-block"></span>
                                 <div class="text-2xl font-bold text-slate-900 dark:text-white">Infinite</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 font-mono uppercase">Coffee consumed</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase">Coffee consumed</div>
                             </div>
                             <div class="glass-card bg-white dark:bg-transparent border border-slate-200 dark:border-white/10 p-6 rounded-xl text-center">
                                 <span class="icon-[ph--chat-circle-dots-duotone] text-4xl text-slate-900 dark:text-white mb-2 inline-block"></span>
                                 <div class="text-2xl font-bold text-slate-900 dark:text-white">50+</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 font-mono uppercase">Contributions on issues</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase">Contributions on issues</div>
                             </div>
                             </div>
                         </div>
@@ -255,7 +256,7 @@
                                     </div>
                                 @endif
                                 <div class="p-6">
-                                    <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 font-mono mb-2">
+                                    <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 mb-2">
                                         @if($post->category)
                                             <span class="text-primary dark:text-drupal-400 uppercase">{{ $post->category }}</span>
                                             <span>•</span>
@@ -317,9 +318,8 @@
 
                         <div class="flex justify-center mb-8">
                             <a href="mailto:bernardo.lemos@live.com.pt" class="group relative px-10 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg overflow-hidden transition shadow-lg hover:scale-[1.02] inline-flex items-center gap-3">
-                                <span class="icon-[ph--paper-plane-tilt-fill] text-xl"></span>
                                 <span>Send me an email</span>
-                                <span class="icon-[ph--arrow-right-bold] group-hover:translate-x-1 transition"></span>
+                                <span class="icon-[ph--paper-plane-tilt-fill] text-xl"></span>
                             </a>
                         </div>
 

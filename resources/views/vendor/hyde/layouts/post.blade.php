@@ -23,14 +23,14 @@
 @section('content')
 
     <!-- Blog Detail -->
-    <main class="pt-32 pb-20 min-h-screen relative bg-slate-50 dark:bg-dark-950">
+    <main class="pt-32 pb-20 min-h-screen relative bg-slate-50 dark:bg-dark-950 overflow-hidden">
         <!-- Background Effects -->
-        <div class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
+        <div class="absolute top-0 -right-40 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
+        <div class="absolute bottom-0 -left-40 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
 
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-            <a href="{{ Hyde::relativeLink('posts') }}" class="flex items-center gap-2 text-sm font-mono text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition group">
+            <a href="{{ Hyde::relativeLink('posts') }}" class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition group">
                 <span class="icon-[ph--arrow-left-bold] group-hover:-translate-x-1 transition"></span>
                 Back to Blog
             </a>
@@ -40,24 +40,24 @@
         <header class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">{{ $page->title }}</h1>
 
-            <div class="flex items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400 font-mono border-y border-slate-200 dark:border-white/5 py-6">
+            <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm text-slate-600 dark:text-slate-400 border-y border-slate-200 dark:border-white/5 py-6">
                 @if($page->date)
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 whitespace-nowrap">
                         <span class="icon-[ph--calendar-blank-fill]"></span> {{ $page->date->short }}
                     </div>
                 @endif
                 @if($page->data('reading_time'))
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 whitespace-nowrap">
                         <span class="icon-[ph--clock-fill]"></span> {{ $page->data('reading_time') }} min read
                     </div>
                 @endif
                 @if($page->category)
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 whitespace-nowrap">
                         <span class="icon-[ph--tag-fill]"></span> {{ $page->category }}
                     </div>
                 @endif
                 @if($page->author)
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 whitespace-nowrap">
                         <span class="icon-[ph--user-fill]"></span> {{ $page->author }}
                     </div>
                 @endif
@@ -74,7 +74,7 @@
                             <!-- Table of Contents & Share -->
                             <div class="glass-card dark:glass-card rounded-xl p-6">
                                 <h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">Table of Contents</h4>
-                                <nav class="space-y-3 text-sm font-mono">
+                                <nav class="space-y-3 text-sm">
                                     @foreach($headings as $index => $heading)
                                         <a href="#{{ $heading['slug'] }}"
                                            class="block text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white border-l-2 border-transparent hover:border-slate-300 dark:hover:border-slate-700 pl-3 transition"

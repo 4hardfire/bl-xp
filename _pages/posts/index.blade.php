@@ -14,7 +14,7 @@
 
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-            <a href="{{ Hyde::relativeLink('/') }}" class="flex items-center gap-2 text-sm font-mono text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition group">
+            <a href="{{ Hyde::relativeLink('/') }}" class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition group">
                 <span class="icon-[ph--arrow-left-bold] group-hover:-translate-x-1 transition"></span>
                 Back to Home
             </a>
@@ -47,7 +47,7 @@
                             </div>
                         @endif
                         <div class="{{ $featuredPost->image ? 'md:w-3/5' : 'w-full' }} p-8 md:p-10 flex flex-col justify-center">
-                            <div class="flex items-center gap-3 text-xs font-mono text-primary dark:text-drupal-400 mb-4">
+                            <div class="flex items-center gap-3 text-xs text-primary dark:text-drupal-400 mb-4">
                                 <span class="bg-primary/10 dark:bg-drupal-500/10 px-2 py-1 rounded uppercase">Featured</span>
                                 <span>•</span>
                                 @if($featuredPost->date)
@@ -58,7 +58,7 @@
                             @if($featuredPost->description)
                                 <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{{ $featuredPost->description }}</p>
                             @endif
-                            <div class="flex items-center gap-2 text-sm text-slate-900 dark:text-white font-mono mt-auto">
+                            <div class="flex items-center gap-2 text-md text-slate-900 dark:text-white mt-auto">
                                 <span>Read article</span>
                                 <span class="icon-[ph--arrow-right-bold] text-lg group-hover:translate-x-1 transition"></span>
                             </div>
@@ -86,7 +86,7 @@
                                             <span class="icon-[ph--file-text-fill] text-xl"></span>
                                         </div>
                                         @if($post->date)
-                                            <span class="text-xs font-mono text-slate-500 dark:text-slate-500">{{ strtoupper($post->date->short) }}</span>
+                                            <span class="text-xs text-slate-500 dark:text-slate-500">{{ strtoupper($post->date->short) }}</span>
                                         @endif
                                     </div>
                                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-purple-400 transition">{{ $post->title }}</h3>
@@ -95,7 +95,7 @@
                                     @endif
                                     @if($post->category)
                                         <div class="flex flex-wrap gap-2">
-                                            <span class="text-[10px] font-mono border border-slate-300 dark:border-slate-700 rounded px-2 py-1 text-slate-600 dark:text-slate-400">#{{ $post->category }}</span>
+                                            <span class="text-[10px] border border-slate-300 dark:border-slate-700 rounded px-2 py-1 text-slate-600 dark:text-slate-400">#{{ $post->category }}</span>
                                         </div>
                                     @endif
                                 </div>

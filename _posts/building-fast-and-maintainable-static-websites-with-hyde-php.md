@@ -16,7 +16,7 @@ HydePHP is a modern, PHP-based static site generator inspired by Jekyll and Lara
 - Blade templates for easy layout customization
 - A simple CLI to build and serve the site
 
-You can learn more on the official website: **https://hydephp.com**
+You can learn more on the official website: **[https://hydephp.com](https://hydephp.com)**
 
 ---
 
