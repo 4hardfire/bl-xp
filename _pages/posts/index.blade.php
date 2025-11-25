@@ -7,10 +7,10 @@
 @section('content')
 
     <!-- Blog Listing -->
-    <main class="pt-32 pb-20 min-h-screen relative bg-slate-50 dark:bg-dark-950">
+    <main class="pt-32 pb-20 min-h-screen relative bg-slate-50 dark:bg-dark-950 overflow-hidden">
         <!-- Background Effects -->
-        <div class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
+        <div class="absolute top-0 -right-40 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
+        <div class="absolute bottom-0 -left-40 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
 
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
