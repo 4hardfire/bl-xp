@@ -4,7 +4,7 @@
     @include('hyde::layouts.head')
     @yield('post_head')
 </head>
-<body id="app" class="antialiased font-sans selection:bg-drupal-500 selection:text-white" x-data="{ navigationOpen: false }" x-on:keydown.escape="navigationOpen = false;">
+<body id="app" class="antialiased font-sans selection:bg-drupal-500 selection:text-white bg-slate-50 dark:bg-dark-950" x-data="{ navigationOpen: false }" x-on:keydown.escape="navigationOpen = false;">
     @include('hyde::components.skip-to-content-button')
     @include('hyde::layouts.navigation')
 

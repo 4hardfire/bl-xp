@@ -76,7 +76,7 @@
     </section>
 
     <!-- Backend Expertise Section -->
-    <section id="services" class="py-32 relative bg-slate-50 dark:bg-dark-950">
+    <section id="services" class="py-32 relative bg-transparent">
         <div class="absolute inset-0 bg-slate-100/50 dark:bg-dark-900/50 skew-y-2 transform origin-top-left -z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -25,7 +25,8 @@ mix.js('resources/assets/app.js', 'app.js')
                         ]
                     },
                     modules: false,
-                    useBuiltIns: false, // Don't include polyfills
+                    useBuiltIns: 'usage',
+                    corejs: 3,
                     bugfixes: true,
                 }]
             ]

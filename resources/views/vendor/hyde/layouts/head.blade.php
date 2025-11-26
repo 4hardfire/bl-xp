@@ -2,16 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ isset($title) ? config('hyde.name') . ' | ' . $title : $page->title() }}</title>
 
-{{-- Resource hints for faster third-party loading --}}
-<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
 @if (file_exists(Hyde::mediaPath('favicon.ico')))
     <link rel="shortcut icon" href="{{ Hyde::relativeLink('media/favicon.ico') }}" type="image/x-icon">
 @endif
-
-{{-- Preload critical Alpine.js early --}}
-<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" crossorigin="anonymous">
 
 {{-- App Meta Tags --}}
 @include('hyde::layouts.meta')
