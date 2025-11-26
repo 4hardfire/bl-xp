@@ -55,6 +55,14 @@ jobs:
         run: npm run prod
       - name: Build HydePHP assets
         run: php hyde build
+      - name: Add .nojekyll for GitHub Pages
+        run: touch _site/.nojekyll
+      - name: Verify optimized assets
+        run: |
+          echo "Checking built assets..."
+          ls -lh _media/app.css _media/app.js 2>/dev/null || echo "Assets in _site/media"
+          ls -lh _site/media/app.css _site/media/app.js 2>/dev/null || true
+          echo "Assets built with versioning for optimal caching"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

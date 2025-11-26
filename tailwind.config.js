@@ -3,10 +3,26 @@ const { addDynamicIconSelectors } = require("@iconify/tailwind")
 
 module.exports = {
     darkMode: 'class',
-    content: [
-        './_pages/**/*.blade.php',
-        './resources/views/**/*.blade.php',
-        './vendor/hyde/framework/resources/views/**/*.blade.php',
+    content: {
+        files: [
+            './_pages/**/*.blade.php',
+            './resources/views/**/*.blade.php',
+            './vendor/hyde/framework/resources/views/**/*.blade.php',
+        ],
+        // Extract classes more aggressively
+        transform: {
+            blade: (content) => content.replace(/(?:class(?:Name)?=["']\s*)([^"']*)(?:["'])/g, '$1'),
+        }
+    },
+    // Safelist classes that might be added dynamically
+    safelist: [
+        'active-nav-link',
+        'cursor-blink',
+        'glass-card',
+        'bg-grid-pattern',
+        'shadow-sm',
+        'line-clamp-2',
+        'line-clamp-3',
     ],
     theme: {
         extend: {
