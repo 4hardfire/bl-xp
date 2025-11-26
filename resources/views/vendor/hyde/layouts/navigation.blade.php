@@ -3,7 +3,7 @@
 @endphp
 
 <!-- Navigation -->
-<nav class="fixed w-full z-50 bg-dark-950/80 dark:bg-dark-950/80 bg-white/90 backdrop-blur-lg border-b border-white/5 dark:border-white/5 border-slate-200 transition-all duration-300" id="navbar" role="banner">
+<nav class="fixed w-full z-50 bg-dark-950/80 dark:bg-dark-950/80 bg-white/90 backdrop-blur-lg border-b border-white/5 dark:border-white/5 border-slate-200 transition-all duration-300" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
             <a href="{{ Routes::get('index') }}" class="flex items-center cursor-pointer group">
