@@ -169,7 +169,7 @@
                             <div class="flex items-center gap-4">
                                 <span class="icon-[ph--package-fill] w-6 h-6 inline-block text-slate-400 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-drupal-400 transition flex-shrink-0"></span>
                                 <div>
-                                    <h5 class="text-base text-slate-900 dark:text-white font-bold group-hover:text-primary dark:group-hover:text-drupal-400 transition">GraphQL Compose Configs</h5>
+                                    <h4 class="text-base text-slate-900 dark:text-white font-bold group-hover:text-primary dark:group-hover:text-drupal-400 transition">GraphQL Compose Configs</h5>
                                     <p class="text-md text-slate-500 dark:text-slate-400 mt-1">Expose Drupal configuration through GraphQL, providing type-safe access to configuration data.</p>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                             <div class="flex items-center gap-4">
                                 <span class="icon-[ph--package-fill] w-6 h-6 inline-block text-slate-400 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-drupal-400 transition flex-shrink-0"></span>
                                 <div>
-                                    <h5 class="text-base text-slate-900 dark:text-white font-bold group-hover:text-primary dark:group-hover:text-drupal-400 transition">OpenFed</h5>
+                                    <h4 class="text-base text-slate-900 dark:text-white font-bold group-hover:text-primary dark:group-hover:text-drupal-400 transition">OpenFed</h5>
                                     <p class="text-md text-slate-500 dark:text-slate-400 mt-1">A general-purpose, multilingual Drupal 7 to Drupal 10 distribution. It has a strong focus on accessibility and it follows European guidelines for several topics, like GDPR.</p>
                                 </div>
                             </div>
