@@ -23,11 +23,7 @@
 @section('content')
 
     <!-- Blog Detail -->
-    <main class="pt-32 pb-20 min-h-screen relative bg-slate-50 dark:bg-dark-950 overflow-hidden">
-        <!-- Background Effects -->
-        <div class="absolute top-0 -right-40 -z-10 w-[800px] h-[800px] bg-primary/10 dark:bg-drupal-600/20 rounded-full blur-[120px] opacity-50 dark:opacity-30 pointer-events-none"></div>
-        <div class="absolute bottom-0 -left-40 -z-10 w-[600px] h-[600px] bg-accent-700/10 dark:bg-purple-900/20 rounded-full blur-[100px] opacity-40 dark:opacity-20 pointer-events-none"></div>
-
+    <main class="pt-32 pb-20 min-h-screen relative bg-slate-50 dark:bg-dark-950">
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
             <a href="{{ Hyde::relativeLink('posts') }}" class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition group">
@@ -72,7 +68,7 @@
                     <div class="sticky top-32 space-y-6">
                         @if(!empty($headings))
                             <!-- Table of Contents & Share -->
-                            <div class="glass-card dark:glass-card rounded-xl p-6">
+                            <div class="glass-card rounded-xl p-6">
                                 <h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">Table of Contents</h4>
                                 <nav class="space-y-3 text-sm">
                                     @foreach($headings as $index => $heading)
@@ -135,7 +131,7 @@
 
         <!-- Back to Blog CTA -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-            <div class="glass-card dark:glass-card rounded-2xl p-8 text-center">
+            <div class="glass-card rounded-2xl p-8 text-center">
                 <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Read More Articles</h3>
                 <p class="text-slate-600 dark:text-slate-400 mb-6 max-w-2xl mx-auto">Explore more articles about web development, technology, and personal insights.</p>
                 <a href="{{ Hyde::relativeLink('posts') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg overflow-hidden transition shadow-lg inline-flex items-center gap-3 group">
