@@ -30,7 +30,7 @@
 
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-            <a href="{{ Hyde::relativeLink('posts') }}" class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition group">
+            <a href="{{ Hyde::relativeLink('posts') }}" class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition group">
                 <span class="icon-[ph--arrow-left-bold] group-hover:-translate-x-1 transition"></span>
                 Back to Blog
             </a>
@@ -77,7 +77,7 @@
                                 <nav class="space-y-3 text-sm">
                                     @foreach($headings as $index => $heading)
                                         <a href="#{{ $heading['slug'] }}"
-                                           class="block text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white border-l-2 border-transparent hover:border-slate-300 dark:hover:border-slate-700 pl-3 transition"
+                                           class="block text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border-l-2 border-transparent hover:border-slate-300 dark:hover:border-slate-700 pl-3 transition"
                                            data-toc-link>
                                             {{ $heading['number'] }}. {{ $heading['title'] }}
                                         </a>
@@ -138,8 +138,8 @@
             <div class="glass-card dark:glass-card rounded-2xl p-8 text-center">
                 <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Read More Articles</h3>
                 <p class="text-slate-600 dark:text-slate-400 mb-6 max-w-2xl mx-auto">Explore more articles about web development, technology, and personal insights.</p>
-                <a href="{{ Hyde::relativeLink('posts') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-primary dark:bg-drupal-500 text-white rounded-lg hover:bg-primary-600 dark:hover:bg-drupal-600 transition font-medium">
-                    <span class="icon-[ph--arrow-left-bold]"></span>
+                <a href="{{ Hyde::relativeLink('posts') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg overflow-hidden transition shadow-lg inline-flex items-center gap-3 group">
+                    <span class="icon-[ph--arrow-left-bold] group-hover:-translate-x-1 transition"></span>
                     Back to All Posts
                 </a>
             </div>

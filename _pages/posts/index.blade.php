@@ -1,8 +1,12 @@
 @extends('hyde::layouts.app')
 @php
-    $title = "Blog";
+    $title = "Blog Posts";
     use Hyde\Pages\MarkdownPost;
 @endphp
+
+@push('meta')
+    <meta name="description" content="A collection of articles where I share thoughts on web development, technology, investing, and my personal learning journey.">
+@endpush
 
 @section('content')
 
@@ -14,7 +18,7 @@
 
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-            <a href="{{ Hyde::relativeLink('/') }}" class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition group">
+            <a href="{{ Hyde::relativeLink('/') }}" class="flex items-center gap-2 text-sm text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition group">
                 <span class="icon-[ph--arrow-left-bold] group-hover:-translate-x-1 transition"></span>
                 Back to Home
             </a>

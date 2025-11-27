@@ -39,15 +39,15 @@
                 <div class="flex items-center gap-8 pt-8 border-t border-slate-200 dark:border-white/10">
                     <div>
                         <div class="text-3xl font-bold text-slate-900 dark:text-white">10+</div>
-                        <div class="text-xs text-slate-500 dark:text-slate-500 uppercase tracking-wider mt-1">Years Exp</div>
+                        <div class="text-xs text-slate-600 dark:text-slate-400 uppercase tracking-wider mt-1">Years Exp</div>
                     </div>
                     <div>
                         <div class="text-3xl font-bold text-slate-900 dark:text-white">50+</div>
-                        <div class="text-xs text-slate-500 dark:text-slate-500 uppercase tracking-wider mt-1">Projects</div>
+                        <div class="text-xs text-slate-600 dark:text-slate-400 uppercase tracking-wider mt-1">Projects</div>
                     </div>
                     <div>
                         <div class="text-3xl font-bold text-slate-900 dark:text-white">100%</div>
-                        <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Backend Focus</div>
+                        <div class="text-xs text-slate-600 dark:text-slate-400 uppercase tracking-wider mt-1">Backend Focus</div>
                     </div>
                 </div>
             </div>
@@ -77,12 +77,12 @@
 
     <!-- Backend Expertise Section -->
     <section id="services" class="py-32 relative bg-transparent">
-        <div class="absolute inset-0 bg-slate-100/50 dark:bg-dark-900/50 skew-y-2 transform origin-top-left -z-10"></div>
+        <div class="absolute inset-0 bg-slate-100 dark:bg-dark-900 skew-y-2 transform origin-top-left -z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
-                    <h2 class="text-sm font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">My Expertise</h2>
+                    <h2 class="text-sm font-bold text-accent-800 dark:text-drupal-300 tracking-widest uppercase mb-2">My Expertise</h2>
                     <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Technical Services</h3>
                 </div>
                     <p class="text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed md:text-right">
@@ -156,7 +156,7 @@
 
             <!-- Text Content -->
             <div class="order-1 lg:order-1">
-                <h2 class="text-sm font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">Community</h2>
+                <h2 class="text-sm font-bold text-accent-800 dark:text-drupal-300 tracking-widest uppercase mb-2">Community</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">Open Source Contributions</h3>
                 <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                 I believe in giving back to the community that powers the web. I help maintaining several modules on Drupal.org and contribute patches to both Core issues and Contrib projects.
@@ -232,10 +232,10 @@
         </section>
 
     <!-- Personal Blog / Hobbies -->
-    <section id="blog" class="py-32 bg-slate-50 dark:bg-dark-900/30 border-t border-slate-200 dark:border-white/5">
+    <section id="blog" class="py-32 bg-slate-50 dark:bg-dark-900 border-t border-slate-200 dark:border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-accent-700 dark:text-drupal-400 tracking-widest uppercase mb-2">Blog</h2>
+                <h2 class="text-sm font-bold text-accent-800 dark:text-drupal-300 tracking-widest uppercase mb-2">Blog</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Latest Articles & Insights</h3>
             </div>
 
@@ -256,7 +256,7 @@
                                     </div>
                                 @endif
                                 <div class="p-6">
-                                    <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500 mb-2">
+                                    <div class="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-400 mb-2">
                                         @if($post->category)
                                             <span class="text-primary dark:text-drupal-400 uppercase">{{ $post->category }}</span>
                                             <span>•</span>

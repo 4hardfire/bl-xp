@@ -15,22 +15,22 @@
                     </p>
                 </div>
 
-                <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Quick Links</h4>
+                <nav aria-label="Quick Links">
+                    <div class="font-bold text-slate-900 dark:text-white mb-4">Quick Links</div>
                     <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                         <li><a href="{{ Hyde::relativeLink('posts') }}" class="hover:text-primary dark:hover:text-drupal-400 transition">Blog articles</a></li>
                     </ul>
-                </div>
+                </nav>
 
-                <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Connect</h4>
+                <nav aria-label="Connect">
+                    <div class="font-bold text-slate-900 dark:text-white mb-4">Connect</div>
                     <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                         <li><a href="https://www.linkedin.com/in/bernardo-paulino-425954ab/" target="_blank" class="hover:text-primary dark:hover:text-drupal-400 transition">LinkedIn</a></li>
                         <li><a href="https://github.com/4hardfire" target="_blank" class="hover:text-primary dark:hover:text-drupal-400 transition">GitHub</a></li>
                         <li><a href="https://www.drupal.org/u/bernardopaulino" target="_blank" class="hover:text-primary dark:hover:text-drupal-400 transition">Drupal.org</a></li>
                         <li><a href="mailto:bernardo.lemos@live.com.pt" class="hover:text-primary dark:hover:text-drupal-400 transition">Email</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
 
             <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
