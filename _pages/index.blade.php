@@ -82,7 +82,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
-                    <h2 class="text-sm font-bold text-accent-800 dark:text-drupal-300 tracking-widest uppercase mb-2">My Expertise</h2>
+                    <h2 class="text-sm font-bold text-accent-900 dark:text-drupal-300 tracking-widest uppercase mb-2">My Expertise</h2>
                     <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Technical Services</h3>
                 </div>
                     <p class="text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed md:text-right">
@@ -156,7 +156,7 @@
 
             <!-- Text Content -->
             <div class="order-1 lg:order-1">
-                <h2 class="text-sm font-bold text-accent-800 dark:text-drupal-300 tracking-widest uppercase mb-2">Community</h2>
+                <h2 class="text-sm font-bold text-accent-900 dark:text-drupal-300 tracking-widest uppercase mb-2">Community</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">Open Source Contributions</h3>
                 <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                 I believe in giving back to the community that powers the web. I help maintaining several modules on Drupal.org and contribute patches to both Core issues and Contrib projects.
@@ -235,7 +235,7 @@
     <section id="blog" class="py-32 bg-slate-50 dark:bg-dark-900 border-t border-slate-200 dark:border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-accent-800 dark:text-drupal-300 tracking-widest uppercase mb-2">Blog</h2>
+                <h2 class="text-sm font-bold text-accent-900 dark:text-drupal-300 tracking-widest uppercase mb-2">Blog</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Latest Articles & Insights</h3>
             </div>
 

@@ -114,7 +114,8 @@ module.exports = {
                 "secondary-dark": "#344556",
                 accent: {
                     500: "#0080ff80",
-                    700: "#007fff"
+                    700: "#007fff",
+                    900: "#0066B2",
                 },
                 "text-normal": "#eeeff1",
                 "text-normal-dark": "#0e0f11",
